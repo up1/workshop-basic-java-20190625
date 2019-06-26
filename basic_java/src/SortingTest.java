@@ -56,12 +56,12 @@ public class SortingTest {
 		assertEquals(list(1,2,3), result);
 	}
 	
-	@Test
-	public void input_4321_after_sort_should_1234() {
-		Sorting s = new Sorting();
-		List<Integer> result = s.process(list(4,3,2,1));
-		assertEquals(list(1,2,3,4), result);
-	}
+//	@Test
+//	public void input_4321_after_sort_should_1234() {
+//		Sorting s = new Sorting();
+//		List<Integer> result = s.process(list(4,3,2,1));
+//		assertEquals(list(1,2,3,4), result);
+//	}
 	
 	private List<Integer> list(int ... numbers){
 		List<Integer> myList = new ArrayList<>();
