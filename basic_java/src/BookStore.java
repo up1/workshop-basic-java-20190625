@@ -13,4 +13,12 @@ public class BookStore {
 		return allBooks;
 	}
 
+	public void pickItem(Book firstBook) {
+		
+	}
+
+	public Basket getCurrentBasket() {
+		return null;
+	}
+
 }
