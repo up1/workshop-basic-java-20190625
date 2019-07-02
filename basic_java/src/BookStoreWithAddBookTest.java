@@ -39,5 +39,27 @@ public class BookStoreWithAddBookTest {
 		assertEquals(3, basket.getAmount());
 		assertEquals(2, basket.getLineItems());
 	}
+	
+	@Test
+	public void add_first_book_to_basket_should_return_first_item_detail() {
+		BookStore bookStore = new BookStore();
+		Book firstBook = new Book("Harry Potter 1", 8, 10);
+		bookStore.pickItem(firstBook);
+		Basket basket = bookStore.getCurrentBasket();
+		assertEquals("Harry Potter 1", basket.getItem(1).getName());
+		assertEquals(1, basket.getItem(1).getQuantity());
+	}
+	
+	@Test
+	public void add_first_and_second_book_to_basket_should_return_item_detail() {
+		BookStore bookStore = new BookStore();
+		Book firstBook1 = new Book("Harry Potter 1", 8, 10);
+		Book firstBook2 = new Book("Harry Potter 1", 8, 10);
+		bookStore.pickItem(firstBook1);
+		bookStore.pickItem(firstBook2);
+		Basket basket = bookStore.getCurrentBasket();
+		assertEquals("Harry Potter 1", basket.getItem(1).getName());
+		assertEquals(2, basket.getItem(1).getQuantity());
+	}
 
 }

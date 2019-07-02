@@ -35,4 +35,8 @@ public class Basket {
 		}
 	}
 
+	public Item getItem(int position) {
+		return items.get(position-1);
+	}
+
 }
