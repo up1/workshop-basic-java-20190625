@@ -1,9 +1,14 @@
 import java.util.List;
 
 public class BookStore {
+	
+	private BookDB db;
+	
+	public void setDb(BookDB db) {
+		this.db = db;
+	}
 
 	public List<Book> listAll() {
-		BookDB db = new BookDB();
 		List<Book> allBooks = db.getAll();
 		return allBooks;
 	}
