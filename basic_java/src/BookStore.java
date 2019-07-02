@@ -3,6 +3,7 @@ import java.util.List;
 public class BookStore {
 	
 	private BookDB db;
+	private Basket basket = new Basket();
 	
 	public void setDb(BookDB db) {
 		this.db = db;
@@ -13,12 +14,12 @@ public class BookStore {
 		return allBooks;
 	}
 
-	public void pickItem(Book firstBook) {
-		
+	public void pickItem(Book book) {
+		basket.addBook(book);
 	}
 
 	public Basket getCurrentBasket() {
-		return null;
+		return basket;
 	}
 
 }
