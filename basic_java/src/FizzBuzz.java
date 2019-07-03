@@ -5,11 +5,11 @@ public class FizzBuzz {
 		String result = ""; 
 		
 		// Relationship
-		MyRule[] rules = {new FizzRule(), new BuzzRule() };
+		MyRule[] rules = {new FizzRule(), new BuzzRule()};
 		
 		for (MyRule myRule : rules) {
 			if (myRule.check(number)) {
-				result += myRule.say(); 
+				return myRule.say(); 
 			}
 		}
 		
