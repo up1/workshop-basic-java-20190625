@@ -3,7 +3,14 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class FizzBuzzTest {
-
+	
+//	@Test
+//	public void input_7_should_say_KBTG() {
+//		FizzBuzz fb = new FizzBuzz();
+//		String result = fb.say(7);
+//		assertEquals("KBTG", result); 
+//	}
+ 
 	@Test
 	public void input_1_should_say_1() {
 		FizzBuzz fb = new FizzBuzz();
