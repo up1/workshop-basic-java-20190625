@@ -21,14 +21,23 @@ public class LCDDigit {
 		int length = input.length();
 		
 		for (int i = 0; i < length; i++) {
-			result[0] +=  firstLine[input.charAt(i)-49];
-			result[1] +=  secondLine[input.charAt(i)-49];
-			result[2] +=  thirdLine[input.charAt(i)-49];
+			result[0] +=  scaling(firstLine[input.charAt(i)-49]);
+			result[1] +=  scaling(secondLine[input.charAt(i)-49]);
+			result[2] +=  scaling(thirdLine[input.charAt(i)-49]);
 		}
 	
 		return  result[0] + "\n" +
 				result[1] + "\n" +
 				result[2] + "\n";
+	}
+
+	private String scaling(String input) {
+		String newInputWithScaled = "";
+		for(int i=0; i<width; i++) {
+			newInputWithScaled += "_";
+		}
+		input = input.replace("_", newInputWithScaled );
+		return input;
 	}
 
 }
