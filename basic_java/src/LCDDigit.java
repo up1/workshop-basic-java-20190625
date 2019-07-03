@@ -1,5 +1,15 @@
 
 public class LCDDigit {
+	
+	private int width = 1;
+	private int height = 1;
+
+	public LCDDigit() {}
+	
+	public LCDDigit(int width, int height) {
+		this.width = width;
+		this.height = height;
+	}
 
 	public String show(int number) {
 		String[] firstLine  = {"   ", " _ "};
