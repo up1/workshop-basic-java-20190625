@@ -1,4 +1,3 @@
-
 interface Report {
 	void generateHeader();
 	void generateBody();
